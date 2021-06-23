@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faUserPlus, faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { Form, Jumbotron, Button } from 'react-bootstrap';
 import { } from '../../src/index.css';
-import img5 from '../images/image33.jpg';
+import img5 from '../images/admin2.jpg';
 import { toast, ToastContainer } from 'react-toastify';
 import Adminservice from '../Services/Adminservice';
 
@@ -98,7 +98,7 @@ class AdminLoginComponent extends Component {
             // All Final Operations and Functions
             <div style={{
                 backgroundImage: `url(${img5})`,
-                backgroundSize: "cover"
+                backgroundSize: "contain"
             }}>
                 <div style={{
                     backgroundColor: 'rgba(15,15,15,0.4)', filter: 'blur(10)',
@@ -107,7 +107,7 @@ class AdminLoginComponent extends Component {
                     paddingTop: "30px"
                 }}>
                     <Jumbotron style={{ width: 600, height: 480, textAlign: "center", backgroundColor: 'rgba(15,15,15,0.4)', filter: 'blur(10)', color: 'white' }}>
-                        <h1 style={{ fontFamily: "Forte" }}>  <FontAwesomeIcon icon={faUsers} /> Admin Login</h1>
+                        <h1 style={{ fontFamily: "Copperplate" }}>  <FontAwesomeIcon icon={faUsers} /> Admin Login</h1>
                         <br />
                         <Form style={{ textAlign: "left" }}>
                             <Form.Group controlId="formBasicEmail">

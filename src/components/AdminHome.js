@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from "react-router-dom";
 import { Jumbotron, Button, Card, Row, Col, CardImg } from 'react-bootstrap';
 import img3 from '../images/Adminimg.jpg';
+import img6 from '../images/flower.jpg';
 import { Link } from "react-router-dom";
 
 class AdminHome extends Component {
@@ -21,11 +22,21 @@ class AdminHome extends Component {
             return <Redirect to="/admin-login" />
         }
         return (
-            <div style={{ backgroundImage: 'linear-gradient(to right, black, lightgreen)', }}>
+            <div style={{
+                backgroundImage: `url(${img6})`,
+                backgroundSize: "contain"
+            }}>
+                
                 <div style={{
                     backgroundColor: 'rgba(15,15,15,0.4)', filter: 'blur(10)',
-                    padding: "40px 40px"
+                    display: "flex",
+                    justifyContent: "center",
+                    paddingTop: "30px"
                 }}>
+                    
+
+            
+
                     <Row>
                         <Col style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'white' }}>
 
@@ -58,8 +69,8 @@ class AdminHome extends Component {
                         </Col>
                     </Row>
 
-                </div>
-            </div>
+            </div></div> 
+            
         );
     }
 }

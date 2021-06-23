@@ -1,5 +1,5 @@
 import { Button, Card, Row, CardColumns } from 'react-bootstrap';
-import img5 from '../images/image33.jpg';
+import img5 from '../images/new.jpg';
 
 const HomeComponent = () => {
   return (
@@ -10,12 +10,12 @@ const HomeComponent = () => {
 
 
         <Row style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: "white" }}>
-        <h1 style ={{ color: "yellow"}}><b><i><marquee> Welcome to Farmer Assistance System </marquee></i> </b></h1>
+        <h1 style ={{ color: "yellow"}}><b><i><marquee behavior="scroll" direction="left" scrollamount="12"> Welcome to Farmer Assistance System </marquee></i> </b></h1>
           <p>
             <h6><i>We have various services to offer. See the cards to get the brief description about each of the services!</i></h6>
           </p>
           <p>
-            <h5><b><i>Please Login to use the services!!</i></b></h5>
+            <h4><b><i>Please Login to use the services!!</i></b></h4>
           </p>
           <br />
         </Row>
@@ -32,7 +32,7 @@ const HomeComponent = () => {
               </a>
               <Card.Body style={{ paddingBottom: "45px" }}>
                 <Card.Title style={{ color: "white" }} href='/admin'><b><i>Admin Services</i></b></Card.Title>
-                <Card.Text style={{ color: "white" }}><b><i> In Admin Service, admin can maintian the records of farmer and dealer, can view the complaints about dealer(s) and mark it as read!</i></b></Card.Text>
+                <Card.Text style={{ color: "white" }}><b><i> In Admin Service, admin can maintian the data of farmer and dealer, can view the complaints about dealer(s) </i></b></Card.Text>
               </Card.Body>
             </Card>
 
@@ -45,7 +45,7 @@ const HomeComponent = () => {
               </a>
               <Card.Body>
                 <Card.Title style={{ color: "white" }} href='/admin'><b><i>Farmer Services</i></b></Card.Title>
-                <Card.Text style={{ color: "white" }}><b><i> In Farmer Service, farmer can chat with dealer(s), can complaint about dealer(s), can view & delete complaint(s),can also view advertisement posted by the dealer(s)!</i></b></Card.Text>
+                <Card.Text style={{ color: "white" }}><b><i> In Farmer Service, farmer can contact with dealer(s), can complaint about dealer(s), can view & delete complaint(s),can also view advertisement posted by the dealer(s)!</i></b></Card.Text>
               </Card.Body>
             </Card>
 
@@ -58,7 +58,7 @@ const HomeComponent = () => {
               </a>
               <Card.Body>
                 <Card.Title style={{ color: "white" }} href='/admin'><b><i>Dealer Services</i></b></Card.Title>
-                <Card.Text style={{ color: "white" }}><b><i>In Dealer Service, dealer can chat with farmer(s), can post advertisement(s), can view & delete advertisement(s) and can also view complaint(s)!</i></b></Card.Text>
+                <Card.Text style={{ color: "white" }}><b><i>In Dealer Service, dealer can contact  farmer(s), can post advertisement(s), can view & delete advertisement(s) and can also view complaint(s) to provide resolution!</i></b></Card.Text>
               </Card.Body>
             </Card>
 
