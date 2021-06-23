@@ -1,7 +1,7 @@
 import { Jumbotron, Card, Container, Row, Col } from 'react-bootstrap';
 import img5 from '../images/image34.jpg';
 //import './app1.css';
-
+ 
 
 const AboutUsComponent = () => {
     return (
