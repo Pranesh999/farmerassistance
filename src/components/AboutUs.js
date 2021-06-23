@@ -6,7 +6,7 @@ import img5 from '../images/farm.jpg';
 const AboutUsComponent = () => {
     return (
         <div style={{ backgroundImage: `url(${img5})`, backgroundSize: "cover" }}>
-            <div style={{ backgroundColor: 'rgba(15,15,15,0.5)', filter: 'blur(10)', padding: "5px 5px" }}>
+            <div style={{ backgroundColor: 'rgba(15,15,15,0.5)', filter: 'blur(5)', padding: "5px 5px" }}>
                 <br></br>
                 <Jumbotron style={{ textAlign: "center", color: 'yellow', backgroundColor: 'rgba(30, 180, 255, 0.5)', filter: 'blur(10)', marginLeft: 10, marginRight: 10 }}>
                     <h1><b><i><marquee behavior="scroll" direction="left" scrollamount="15">Farmer Assistance System </marquee></i></b></h1>

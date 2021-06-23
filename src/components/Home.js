@@ -26,7 +26,7 @@ const HomeComponent = () => {
             <Card
               bg="transparent" text="light" className="mb-3" style={{ width: "20rem" }}>
               <a href="/adminLogin">
-                <Card.Body style={{ backgroundImage: 'linear-gradient(to right, #00b09b, #96c93d)' }}>
+                <Card.Body style={{ backgroundImage: 'linear-gradient(to top, #ccccff 0%, #66ccff 100%)' }}>
                   <Button variant="link" style={{ padding: "50px 80px", textDecoration: "none", fontFamily: "Forte", fontSize: "20px", color: "black" }} >Admin Login</Button>
                 </Card.Body>
               </a>
@@ -39,7 +39,7 @@ const HomeComponent = () => {
             <Card
               bg="transparent" text="light" className="mb-3" style={{ width: "20rem" }}>
               <a href="/farmerLogin">
-                <Card.Body style={{ backgroundImage: 'linear-gradient(to right, #fc5c7d, #6a82fb)' }}>
+                <Card.Body style={{ backgroundImage: 'linear-gradient(to bottom left, #33cc33 0%, #0099cc 100%)' }}>
                   <Button variant="link" style={{ padding: "50px 80px", textDecoration: "none", fontFamily: "Forte", fontSize: "20px", color: "black" }} >Farmer Login</Button>
                 </Card.Body>
               </a>
@@ -52,7 +52,7 @@ const HomeComponent = () => {
             <Card
               bg="transparent" text="light" className="mb-3" style={{ width: "20rem" }}>
               <a href="/dealerLogin">
-                <Card.Body style={{ backgroundImage: 'linear-gradient(to right, #00b4db, #0083b0)' }}>
+                <Card.Body style={{ backgroundImage: 'linear-gradient(to bottom left, #ff3399 0%, #0099cc 100%)' }}>
                   <Button variant="link" style={{ padding: "50px 80px", textDecoration: "none", fontFamily: "Forte", fontSize: "20px", color: "black" }} >Dealer Login</Button>
                 </Card.Body>
               </a>

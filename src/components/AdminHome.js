@@ -59,7 +59,7 @@ class AdminHome extends Component {
                                 <br />
                                 <Card.Title style={{ fontSize: "40px", color: "black" }}>Welcome Admin!</Card.Title>
                                 <Card.Text>Admin can view complaints about Dealer(s),</Card.Text>
-                                <Card.Text>can maintain records of</Card.Text>
+                                <Card.Text> Admin can maintain records of</Card.Text>
                                 <Card.Text>Farmer(s) and Dealer(s)!</Card.Text>
                                 <Card.Text><Link to="/"><Button variant="danger" style={{ padding: "10px 30px" }}>Logout</Button></Link></Card.Text>
                                 <br />
