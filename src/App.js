@@ -62,8 +62,6 @@ function App() {
       <Switch>
 
         <Route path='/' component={HomeComponent} exact />
-
-       
         <Route path='/adminLogin' component={AdminLoginComponent} exact />     
         <Route path='/about' component={AboutUsComponent} exact />
         <Route path='/adminRegistration' component={AdminRegistration} exact />
@@ -76,7 +74,7 @@ function App() {
       <div class="d-flex flex-column">
         <footer class="footer">
           <div style={{ backgroundColor: '#343A40' }}>
-            <span><b style={{ color: "white", fontFamily: "Calibri" }}><i>&copy; Content owned by the team.</i></b></span>
+            <span><b style={{ color: "white", fontFamily: "Calibri" }}><i>&copy; A Farmer Assitance Team project.</i></b></span>
           </div>
         </footer>
       </div>

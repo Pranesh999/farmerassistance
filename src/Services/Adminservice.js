@@ -9,5 +9,5 @@ class Adminservice {
     }
 }
 
-//exporting EmployeeService object
+
 export default new Adminservice();

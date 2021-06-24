@@ -1,7 +1,7 @@
 import { Jumbotron, Card, Container, Row, Col } from 'react-bootstrap';
 import img5 from '../images/farm.jpg';
-//import './app1.css';
- 
+import './app1.css';
+
 
 const AboutUsComponent = () => {
     return (
@@ -33,20 +33,24 @@ const AboutUsComponent = () => {
                             <Card style={{ width: '18rem', margin: 'auto', padding: "30px 30px", backgroundColor: 'rgba(15,15,15,1)', filter: 'blur(10)', color: 'white' }}>
                                 {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                                 <Card.Body>
-                                    <Card.Title>
+                               
+                                   <Card.Title>
                                         
                                         <i>Pratibha Singh</i>
                                        
-                                        </Card.Title>
+                                      </Card.Title>
+                                        
+                                        
                                     <Card.Text>
                                         
                                         <i>Software Associate-
                                             Java Full Stack Developer</i>
                                         
                                     </Card.Text>
+                                    
                                 </Card.Body>
                             </Card>
-                            
+                           
                         </Col>
                         
 
