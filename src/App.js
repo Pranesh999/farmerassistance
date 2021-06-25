@@ -14,15 +14,15 @@ import AdminRegistration from './components/AdminRegistration';
 //import PostAdvertisement from './components/postAdvertisement';
 //import DealersAccountComponent from './components/dealersAccount';
 //import ViewAdvertisement from './components/viewAdvertisement';
-//import ComplaintForm from './components/ComplaintForm';
-//import ListComplain from './components/ListComplain';
+import ComplaintForm from './components/ComplaintForm';
+import ListComplaint from './components/ListComplaint';
 //import DealerComplaint from './components/DealerComplaint';
 //import FarmerComplaint from './components/FarmerComplaint';
 import AdminHome from './components/AdminHome';
 //import FarmerHome from './components/FarmerHome';
 //import ViewAdvertisementById from './components/viewAdvertisementById';
-//import ListDealerComponent from './components/ListDealerComponent';
-//import ListFarmerComponent from './components/ListFarmerComponent';
+import ListDealerComponent from './components/ListDealerComponent';
+import ListFarmerComponent from './components/ListFarmerComponent';
 //import ChatApplication from './components/ChatApplication';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -66,7 +66,9 @@ function App() {
         <Route path='/about' component={AboutUsComponent} exact />
         <Route path='/adminRegistration' component={AdminRegistration} exact />
         <Route path='/admin-home' component={AdminHome} exact />
-        
+        <Route path='/viewComplaint' component={ListComplaint} exact />
+        <Route path='/viewFarmer' component={ListFarmerComponent} exact />
+        <Route path='/viewDealer' component={ListDealerComponent} exact />
 
         
       </Switch>

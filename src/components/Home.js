@@ -11,9 +11,11 @@ const HomeComponent = () => {
 
         <Row style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: "white" }}>
         <h1 style ={{ color: "yellow"}}><b><i><marquee behavior="scroll" direction="left" scrollamount="12"> Welcome to Farmer Assistance System </marquee></i> </b></h1>
+          
           <p>
             <h6><i>We have various services to offer. See the cards to get the brief description about each of the services!</i></h6>
           </p>
+         
           <p>
             <h4><b><i>Please Login to use the services!!</i></b></h4>
           </p>

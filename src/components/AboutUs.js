@@ -15,7 +15,7 @@ const AboutUsComponent = () => {
                            Farming Assistance Application is a very useful software for farmers and dealers as they can directly sell and communicate with other dealers. 
                            It also provides an option to view Advertisements posted by the dealer(s). Farmer will get an option to complaint against
                            dealer incase of any greviance.
-                           </div>
+                           </div>       
                     </i>
                     </p>
 
@@ -31,6 +31,7 @@ const AboutUsComponent = () => {
                         <Col sm>
                         
                             <Card style={{ width: '18rem', margin: 'auto', padding: "30px 30px", backgroundColor: 'rgba(15,15,15,1)', filter: 'blur(10)', color: 'white' }}>
+                                
                                 {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                                 <Card.Body>
                                

@@ -41,7 +41,7 @@ class AdminHome extends Component {
                         <Col style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'white' }}>
 
                             <p>
-                                <Link to="/viewComplain"><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)', padding: "10px 76px 10px 76px", color: "white", fontSize: "20px", fontFamily: "Apple Chancery" }}>View Complaints</Button></Link>
+                                <Link to="/viewComplaint"><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)', padding: "10px 76px 10px 76px", color: "white", fontSize: "20px", fontFamily: "Apple Chancery" }}>View Complaints</Button></Link>
                             </p>
                             <p>
                                 <Link to="/viewFarmer"><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #fc5c7d, #6a82fb)', padding: "10px 93px 10px 93px", color: "white", fontSize: "20px", fontFamily: "Apple Chancery" }}>View Farmers</Button></Link>

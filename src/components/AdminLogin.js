@@ -101,7 +101,7 @@ class AdminLoginComponent extends Component {
                 backgroundSize: "contain"
             }}>
                 <div style={{
-                    backgroundColor: 'rgba(15,15,15,0.4)', filter: 'blur(10)',
+                    backgroundColor: 'rgba(15,15,15,0.5)', filter: 'blur(10)',
                     display: "flex",
                     justifyContent: "center",
                     paddingTop: "30px"
