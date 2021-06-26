@@ -235,15 +235,7 @@ class RegisterFarmer extends Component {
 
                                         </div> 
 
-                                        <div className = "form-group"> 
-
-                                            <label> Crop name: </label> 
-
-                                            <input placeholder="cropName" name="cropName" className="form-control"  
-
-                                                value={this.state.cropName} onChange={this.changeCropNameHandler}/> 
-
-                                        </div> 
+                             
 
                                         <div className = "form-group"> 
 

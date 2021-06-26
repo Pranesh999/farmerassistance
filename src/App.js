@@ -5,25 +5,34 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { Route, Link, Switch } from 'react-router-dom';
 import HomeComponent from './components/Home';
 import AdminLoginComponent from './components/AdminLogin';
-//import FarmerLogin from './components/FarmerLogin';
-//import DealerLoginComponent from './components/DealerLogin';
+import FarmerLogin from './components/FarmerLogin';
 import AboutUsComponent from './components/AboutUs';
-//import DealerRegistration from './components/DealerRegistration';
-//import FarmerRegistration from './components/FarmerRegistration';
+import FarmerRegistration from './components/FarmerRegistration';
 import AdminRegistration from './components/AdminRegistration';
-//import PostAdvertisement from './components/postAdvertisement';
-//import DealersAccountComponent from './components/dealersAccount';
-//import ViewAdvertisement from './components/viewAdvertisement';
+import ViewAdvertisements from './components/ViewAdvertisements';
 import ComplaintForm from './components/ComplaintForm';
 import ListComplaint from './components/ListComplaint';
-//import DealerComplaint from './components/DealerComplaint';
-//import FarmerComplaint from './components/FarmerComplaint';
 import AdminHome from './components/AdminHome';
-//import FarmerHome from './components/FarmerHome';
-//import ViewAdvertisementById from './components/viewAdvertisementById';
 import ListDealerComponent from './components/ListDealerComponent';
 import ListFarmerComponent from './components/ListFarmerComponent';
-//import ChatApplication from './components/ChatApplication';
+import FarmerHome from './components/FarmerHome';
+import ViewFarmer from './components/ViewFarmer';
+import ViewFarmerById from './components/ViewFarmerById';
+import RegisterFarmer from './components/RegisterFarmer';
+import FarmerComplaint from './components/FarmerComplaint';
+import DealerComplaint from './components/DealerComplaint';
+import ListCropComponent from './components/ListCropComponent';
+import SellCropComponent from './components/SellCropComponent';
+import ViewCropComponent from './components/ViewCropComponent';
+import AddCrop from './components/AddCrop';
+import DealerHome from './components/DealerHome';
+import DealerLogin from './components/DealerLogin';
+import DealerLogout from './components/DealerLogout';
+import RegisterDealer from './components/RegisterDealer';
+import UpdateDealerComponent from './components/UpdateDealerComponent';
+import ViewDealer from './components/ViewDealer';
+import ViewDealerById from './components/ViewDealerById';
+
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -69,6 +78,55 @@ function App() {
         <Route path='/viewComplaint' component={ListComplaint} exact />
         <Route path='/viewFarmer' component={ListFarmerComponent} exact />
         <Route path='/viewDealer' component={ListDealerComponent} exact />
+
+
+
+        <Route path = "/home" component = {FarmerLogin}></Route> 
+
+            <Route path = "/signup" component = {FarmerRegistration}></Route> 
+
+            <Route path = "/farmer-home" component = {FarmerHome}></Route> 
+
+            <Route path={'/farmer-home/:email'} render={(props)=>
+        <FarmerHome {...props} key={props.match.params.email}/> }/> 
+           
+            <Route path = "/farmers" component = {ViewFarmer}></Route>
+            <Route path = "/view-farmer/:id" component = {ViewFarmerById}></Route>
+               
+            <Route path = "/add-farmer/:id" component = {RegisterFarmer}></Route>
+            <Route path = "/viewAdvertisements" component = {ViewAdvertisements}></Route>
+          {/*  <Route path = "/sellCrop" component = {AddCrop}></Route>*/}
+            
+
+        <Route path='/viewComplaint' component={ListComplaint} exact/>
+       
+    
+        
+        <Route path={'/addComplaint/:email'} render={(props)=>
+        <ComplaintForm {...props} key={props.match.params.email}/> }/> 
+     
+        <Route path={'/farmerComplaint/:email'} render={(props)=>
+        <FarmerComplaint {...props} key={props.match.params.email}/> }/>
+        <Route path={'/dealerComplaint/:email'} render={(props)=>
+        <DealerComplaint {...props} key={props.match.params.email}/> }/>
+        <Route path="/crop" component={ListCropComponent}></Route>
+        <Route path="/sell-crop/:id" component={SellCropComponent}></Route>
+        <Route path="/view-crop/:id" component={ViewCropComponent}></Route>
+        <Route path = "/add-crop" component = {AddCrop}></Route>
+
+        <Route path="/dealer-home" exact component ={DealerHome}></Route>  
+          <Route path="/DealerLogin" exact component ={DealerLogin}></Route>
+          <Route path="/dealersignup" exact component ={RegisterDealer}></Route> 
+          <Route path="/logout" exact component ={DealerLogout}></Route>
+
+            {/* <Route path="/" exact component ={ListDealerComponent}></Route>
+            <Route path="/dealers" component ={ListDealerComponent}></Route> */}
+            <Route path="/add-dealer/:id" component = {UpdateDealerComponent}></Route> 
+             <Route path="/dealers" component = {ViewDealer}></Route> 
+             <Route path = "/view-dealer/:id" component = {ViewDealerById}></Route>
+
+
+
 
         
       </Switch>

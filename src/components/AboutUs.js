@@ -1,7 +1,8 @@
 import { Jumbotron, Card, Container, Row, Col } from 'react-bootstrap';
 import img5 from '../images/farm.jpg';
 import './app1.css';
-import admin1 from '../images/admin1.jpg'
+import img3 from '../images/nisha.jpg'
+import img2 from '../images/pratibha.jpg'
 
 
 const AboutUsComponent = () => {
@@ -9,7 +10,7 @@ const AboutUsComponent = () => {
         <div style={{ backgroundImage: `url(${img5})`, backgroundSize: "cover" }}>
             <div style={{ backgroundColor: 'rgba(15,15,15,0.5)', filter: 'blur(5)', padding: "5px 5px" }}>
                 <br></br>
-                <Jumbotron style={{ textAlign: "center", color: 'yellow', backgroundColor: 'rgba(230, 255, 255, 1)', filter: 'blur(10)', marginLeft: 10, marginRight: 10 }}>
+                <Jumbotron style={{ textAlign: "center", color: 'yellow', backgroundColor: 'rgba(30, 180, 255, 0.5)', filter: 'blur(10)', marginLeft: 10, marginRight: 10 }}>
                     <h1><b><i><marquee behavior="scroll" direction="left" scrollamount="15">Farmer Assistance System </marquee></i></b></h1>
                     <p>
                         <i><div style = {{textAlign:"center", color: 'white', fontSize: "25px", fontFamily: "Apple Chancery"}}>
@@ -34,7 +35,7 @@ const AboutUsComponent = () => {
                         <i class="fa fa-arrow-circle-right fa-5x float-right"></i>
                       {/*  <h3 class="card-title">Pratibha Singh</h3>
                         <p class="card-text">Java Full Stack Developer</p>*/}
-                        <div style={{backgroundImage: `url(${img5})`, backgroundSize: "cover",padding:"100px"}}></div>
+                        <div style={{backgroundImage: `url(${img2})`, backgroundSize: "100% 90%",padding:"100px"}}></div>
                     </div>
                 </div>
                 <div class="card-back bg-white"style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)'}}>
@@ -53,12 +54,14 @@ const AboutUsComponent = () => {
                 <div class="card-front text-white bg-dark">
                     <div class="card-body">
                         <i class="fa fa-arrow-circle-right fa-5x float-right"></i>
-                        <h3 class="card-title">Nisha</h3>
-                        <p class="card-text">Java Full Stack Developer</p>
+                        <div style={{backgroundImage: `url(${img3})`, backgroundSize: "contain",padding:"100px"}}></div>
+                       
                     </div>
                 </div>
-                <div class="card-back bg-white">
+                <div class="card-back bg-white" style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)'}}>
                     <div class="card-body text-primary">
+                    <h3 class="card-title">Nisha</h3>
+                        <p class="card-text">Java Full Stack Developer</p>
                         <h3 class="card-title">Delaer Module</h3>
                         <p class="card-text">Dealer will register and login to use services</p>
                        {/* <a href="#" class="btn btn-outline-primary">Action</a>*/}
@@ -75,7 +78,7 @@ const AboutUsComponent = () => {
                         <p class="card-text">Java Full Stack Developer</p>
                     </div>
                 </div>
-                <div class="card-back bg-white">
+                <div class="card-back bg-white"style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)'}}>
                     <div class="card-body text-primary">
                         <h3 class="card-title">Dealer Module</h3>
                         <p class="card-text">Dealer will be able to post Advertisements and can view complaints</p>
@@ -95,7 +98,7 @@ const AboutUsComponent = () => {
                         <p class="card-text">Java Full Stack Developer</p>
                     </div>
                 </div>
-                <div class="card-back bg-white">
+                <div class="card-back bg-white"style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)'}}>
                     <div class="card-body text-primary">
                         <h3 class="card-title">Farmer Module</h3>
                         <p class="card-text">Farmer will Login/Register to use the services</p>
@@ -113,7 +116,7 @@ const AboutUsComponent = () => {
                         <p class="card-text">Java Full Stack Developer</p>
                     </div>
                 </div>
-                <div class="card-back bg-white">
+                <div class="card-back bg-white"style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)'}}>
                     <div class="card-body text-primary">
                         <h3 class="card-title">Farmer Module</h3>
                         <p class="card-text">Farmer can sell crops and can make contact dealer</p>
@@ -131,7 +134,7 @@ const AboutUsComponent = () => {
                         <p class="card-text">Java Full Stack Developer</p>
                     </div>
                 </div>
-                <div class="card-back bg-white">
+                <div class="card-back bg-white"style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)'}}>
                     <div class="card-body text-primary">
                         <h3 class="card-title">Admin Module</h3>
                         <p class="card-text">Admin will be able to view farmers, delaers and complaints</p>

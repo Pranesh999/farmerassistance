@@ -63,9 +63,7 @@ class ViewFarmerById extends Component {
                                 <tr> 
                                     <td>Farmer Name</td> <td> {this.state.farmer.farmerName} </td>                                                                 
                                 </tr> 
-                                 <tr> 
-                                    <td>Crop Name</td> <td> {this.state.farmer.cropName}</td> 
-                                </tr> 
+                                
                                 <tr> 
                                     <td> Email Id</td> <td> {this.state.farmer.emailId}</td> 
                                 </tr> 

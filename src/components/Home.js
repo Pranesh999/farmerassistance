@@ -53,7 +53,7 @@ const HomeComponent = () => {
 
             <Card
               bg="transparent" text="light" className="mb-3" style={{ width: "20rem" }}>
-              <a href="/dealerLogin">
+              <a href="/DealerLogin">
                 <Card.Body style={{ backgroundImage: 'linear-gradient(to bottom left, #ff3399 0%, #0099cc 100%)' }}>
                   <Button variant="link" style={{ padding: "50px 80px", textDecoration: "none", fontFamily: "Forte", fontSize: "20px", color: "black" }} >Dealer Login</Button>
                 </Card.Body>

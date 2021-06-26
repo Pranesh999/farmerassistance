@@ -91,7 +91,7 @@ handleSubmit = (e)=>{
     {
         ComplaintService.addComplaint(complaint, this.state.farmerId, this.state.dealerId)
         .then(res => {
-            this.props.history.push(`/farmer-home/${this.state.emailId}`);
+            this.props.history.push(`/farmer-home/${this.state.farmerEmail}`);
             toast.success("Complaint added successfully !!!", 
             {
                 position: toast.POSITION.marginLeft,

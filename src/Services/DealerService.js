@@ -1,21 +1,26 @@
 import axios from 'axios';
-
-//const CANDIDATE_API_BASE_URL = "http://localhost:9091/dealer";
-const CANDIDATE_API_BASE_URL = "http://localhost:8080/dealer";
-
+const DEALER_API_BASE_URL ="http://localhost:8080/dealer";
 
 class DealerService {
-
-    signUp(dealer) {
-        return axios.post(CANDIDATE_API_BASE_URL+'/addDealer', dealer);
+    getDealers() {
+        console.log("DEALER_API_BASE_URL + '/viewDealer'-->",DEALER_API_BASE_URL + '/viewDealer')
+        return axios.get(DEALER_API_BASE_URL + '/viewDealer');
     }
-    dealerLogin(dealerlogin){
-        return axios.post(CANDIDATE_API_BASE_URL+'/login', dealerlogin);
+    addDealer(dealer) {
+        return axios.post(DEALER_API_BASE_URL + '/add' , dealer);
     }
-    getAllDealers(){
-        return axios.get(CANDIDATE_API_BASE_URL+'/getAllDealers');
+    updateDealer(dealer) {
+        return axios.put(DEALER_API_BASE_URL + '/update' , dealer);
     }
-    
+    dealerLogin(dealerLogin) {
+         return axios.post(DEALER_API_BASE_URL + '/login',dealerLogin);
+     }
+     viewDealerById(dealerId){ 
+        return axios.get(DEALER_API_BASE_URL + '/viewDealer/' + dealerId);  
+     } 
+     
+    deleteDealer(dealerId){ 
+        return axios.delete(DEALER_API_BASE_URL + '/deleteDealer/' + dealerId); 
+    } 
 }
-
 export default new DealerService();

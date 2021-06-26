@@ -105,7 +105,7 @@ class ViewFarmer extends Component {
                                     <th> Farmer Name</th> 
                                     <th> Email Id</th> 
                                     <th> Password</th> 
-                                    <th> Crop Name</th> 
+                                    
                                     <th> Location</th> 
                                     <th> Contact Number</th> 
                                     <th> Actions</th> 
@@ -130,7 +130,7 @@ class ViewFarmer extends Component {
                                              <td> {farmers.emailId}</td>
                                              <td> {farmers.password}</td>   
 
-                                             <td>  { farmers.cropName}</td>  
+                                            
                                              <td> {farmers.location}</td>
                                              <td> {farmers.contactNo}</td>
                                               
