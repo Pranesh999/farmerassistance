@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Form, InputGroup, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope, faLock, faUserPlus, faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
-// import img5 from '../images/image33.jpg';
+ import img5 from '../images/dealerlogin1.jpg';
 import { Jumbotron } from 'react-bootstrap';
 
 const passwordRegex = RegExp(
@@ -159,8 +159,8 @@ class DealerLogin extends Component {
     const { formErrors } = this.state;
     return (
       <div style={{
-        // backgroundImage: `url(${img5})`,
-        backgroundSize: "cover"
+         backgroundImage: `url(${img5})`,
+        backgroundSize: "contain"
       }}>
         <div style={{
           backgroundColor: 'rgba(15,15,15,0.4)', filter: 'blur(10)',
@@ -169,7 +169,7 @@ class DealerLogin extends Component {
           paddingTop: "30px"
         }}>
           <Jumbotron style={{ width: 600, height: 500, textAlign: "center", backgroundColor: 'rgba(15,15,15,0.4)', filter: 'blur(10)', color: 'white' }}>
-            <h1 style={{ fontFamily: "Forte" }}>  
+            <h1 style={{ fontFamily: "Copperplate" }}>  
              <FontAwesomeIcon icon={faUsers} />  
             Dealer Login</h1>
             <br />

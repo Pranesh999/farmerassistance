@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from "react-router-dom";
 import { Jumbotron, Button, Card, Row, Col, CardImg } from 'react-bootstrap';
-// import img3 from '../images/farmer.jpg';
+ import img5 from '../images/dealerlogin2.jpg';
 import { Link } from "react-router-dom";
 
 class DealerHome extends Component {
@@ -9,7 +9,7 @@ class DealerHome extends Component {
     super(props);
     const token = localStorage.getItem("token1")
     let loggedIn = true;
-    if (token == null) {
+    if (token == null) {    
       loggedIn = false;
     }
     this.state = {
@@ -24,7 +24,7 @@ class DealerHome extends Component {
 
 
     return (
-      <div style={{ backgroundImage: 'linear-gradient(to right, black, lightgreen)', }}>
+      <div style={{ backgroundImage: `url(${img5})`,backgroundSize:"contain" }}>
         <div style={{
           backgroundColor: 'rgba(15,15,15,0.4)', filter: 'blur(10)',
           padding: "40px 40px"
@@ -36,7 +36,7 @@ class DealerHome extends Component {
             <Col style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'white' }}>
 
               <p>
-                <Link to={`/dealers/${this.state.dealerEmail}`}><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)', padding: "10px 84px 10px 84px", color: "white", fontSize: "20px", fontFamily: "Forte" }}>View Dealers</Button></Link>
+                <Link to={`/dealers/${this.state.dealerEmail}`}><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)', padding: "10px 84px 10px 84px", color: "white", fontSize: "20px", fontFamily: "Copperplate" }}>View Dealers</Button></Link>
               </p>
               {/* <p>
                 <Link to={`/farmerComplain/${this.state.farmerEmail}`}><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #fc5c7d, #6a82fb)', padding: "10px 80px 10px 80px", color: "white", fontSize: "20px", fontFamily: "Forte" }}>View Complaints</Button></Link>
@@ -48,7 +48,7 @@ class DealerHome extends Component {
             </Col>
             <Col style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'white' }}>
 
-              <Card style={{ backgroundColor: 'rgba(15,15,15,0.2)', color: "white", fontSize: "25px", fontFamily: "Forte" }}>
+              <Card style={{ backgroundColor: 'rgba(15,15,15,0.2)', color: "white", fontSize: "25px", fontFamily: "Copperplate" }}>
 
                 {/* <CardImg src={img3} ></CardImg> */}
                 <br />
