@@ -40,7 +40,7 @@ const HomeComponent = () => {
 
             <Card
               bg="transparent" text="light" className="mb-3" style={{ width: "20rem" }}>
-              <a href="/farmerLogin">
+              <a href="/home">
                 <Card.Body style={{ backgroundImage: 'linear-gradient(to bottom left, #33cc33 0%, #0099cc 100%)' }}>
                   <Button variant="link" style={{ padding: "50px 80px", textDecoration: "none", fontFamily: "Forte", fontSize: "20px", color: "black" }} >Farmer Login</Button>
                 </Card.Body>

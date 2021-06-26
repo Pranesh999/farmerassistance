@@ -1,13 +1,13 @@
-/*import React, {Component} from 'react';
-import ComplaintService from '../services/ComplaintService'
+import React, {Component} from 'react';
+import ComplaintService from '../Services/ComplaintService'
 import { Form, Jumbotron, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import DealerService from '../services/DealerService';
+import DealerService from '../Services/DealerService';
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-import FarmerService from '../services/FarmerService';
+import FarmerService from '../Services/FarmerService';
 
 const idPattern = /[0-9]+/;
 const ApiError =(props)=>{
@@ -49,7 +49,7 @@ componentDidMount()
       this.setState({dealers:response.data})
     });
 
-    FarmerService.getAllFarmer().then(response=> {
+    FarmerService.viewFarmer().then(response=> {
         farmer = response.data.filter(f=>f.emailId === this.state.farmerEmail);
         this.setState({farmerName: farmer.map(f=> f.farmerName),
         farmerId: farmer.map(f=> f.farmerId)
@@ -91,7 +91,7 @@ handleSubmit = (e)=>{
     {
         ComplaintService.addComplaint(complaint, this.state.farmerId, this.state.dealerId)
         .then(res => {
-            this.props.history.push(`/farmer-home/${this.state.farmerEmail}`);
+            this.props.history.push(`/farmer-home/${this.state.emailId}`);
             toast.success("Complaint added successfully !!!", 
             {
                 position: toast.POSITION.marginLeft,
@@ -223,4 +223,4 @@ clearForm=(event) => {
 
 }
  
-export default ComplaintForm;*/
+export default ComplaintForm;

@@ -14,7 +14,7 @@ class ListFarmerComponent extends Component {
         }
     }
     componentDidMount() {
-        FarmerService.getAllFarmer()
+        FarmerService.viewFarmer()
             .then((res) => {
                 this.setState({ farmers: res.data });
             });
