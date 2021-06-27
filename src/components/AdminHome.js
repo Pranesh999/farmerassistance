@@ -50,6 +50,10 @@ class AdminHome extends Component {
                                 <Link to="/viewDealer"><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)', padding: "10px 93px 10px 93px", color: "white", fontSize: "20px", fontFamily: "Apple Chancery" }}>View Dealers</Button></Link>
                             </p>
 
+                            <p>
+                                <Link to="/updateFarmer"><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)', padding: "10px 93px 10px 93px", color: "white", fontSize: "20px", fontFamily: "Apple Chancery" }}>Update & delete farmer</Button></Link>
+                            </p>
+
                         </Col>
                         <Col style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'white' }}>
 

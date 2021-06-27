@@ -76,8 +76,9 @@ function App() {
         <Route path='/adminRegistration' component={AdminRegistration} exact />
         <Route path='/admin-home' component={AdminHome} exact />
         <Route path='/viewComplaint' component={ListComplaint} exact />
-        <Route path='/viewFarmer' component={ListFarmerComponent} exact />
+        <Route path='/viewFarmer' component={ViewFarmer} exact />
         <Route path='/viewDealer' component={ViewDealer} exact />
+        <Route path='/updateFarmer' component={ViewFarmer} exact />
 
 
 
