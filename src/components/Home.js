@@ -1,10 +1,12 @@
 import { Button, Card, Row, CardColumns } from 'react-bootstrap';
 import img5 from '../images/new.jpg';
+import img1 from '../images/green.jpg'
+import img2 from '../images/yellow.jpg'
 
 const HomeComponent = () => {
   return (
     <div style={{
-      backgroundImage: `url(${img5})`, backgroundSize: "cover"
+      backgroundImage: `url(${img2})`, backgroundSize: "cover"
     }}>
       <div style={{ backgroundColor: 'rgba(15,15,15,0.5)', filter: 'blur(10)', padding: "40px 40px" }}>
 

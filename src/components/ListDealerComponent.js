@@ -18,7 +18,7 @@ class ListDealerComponent extends Component {
     }
     componentDidMount() {
 
-        Dealerservice.getAllDealers()
+        Dealerservice.viewDealer()
 
             .then((res) => {
 
