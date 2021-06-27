@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faUserPlus, faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { Form, Jumbotron, Button } from 'react-bootstrap';
 import { } from '../../src/index.css';
-import img5 from '../images/admin2.jpg';
+import img5 from '../images/light.jpg';
 import img6 from '../images/adbg.jpg'
 import { toast, ToastContainer } from 'react-toastify';
 import Adminservice from '../Services/Adminservice';
@@ -99,7 +99,8 @@ class AdminLoginComponent extends Component {
             // All Final Operations and Functions
             <div style={{
                 backgroundImage: `url(${img6})`,
-                backgroundSize: "contain"
+                backgroundSize: "contain",
+                
             }}>
                 <div style={{
                     backgroundColor: 'rgba(15,15,15,0.5)', filter: 'blur(10)',
