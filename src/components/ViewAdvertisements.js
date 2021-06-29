@@ -1,31 +1,51 @@
 import React, { Component } from 'react';
 
+import FarmerService from '../Services/FarmerService' 
+import img6 from '../images/fields.jpg'
+
 class ViewAdvertisements extends Component {
 
     constructor(props) { 
 
         super(props) 
 
- 
-
-        this.state = { 
+      this.state = { 
 
          advertisement: []
-
         } 
 
     } 
 
     goBack(){ 
 
-        this.props.history.push('/farmers'); 
+        this.props.history.push(`/farmer-home/${this.state.emailId}`); 
 
     } 
+
+componentDidMount(){
+
+    FarmerService.viewAdvertisements().then((Response)=>{
+        this.setState({advertisement:Response.data})
+    });
+
+}
 
 
   render() {
     return (
+        <div>
+        <div style={{
+    backgroundImage: 'linear-gradient(to right, black, lightgreen)',
+    display: "flex",
+    justifyContent: "center",
+    paddingTop: "30px"
+}}>
+      
         <div className = "container"> 
+        <div style={{
+                backgroundImage: `url(${img6})`,
+                backgroundSize: "contain"
+            }}>
                <div className = "row"> 
 
 <table className = "table table-striped table-bordered"> 
@@ -57,19 +77,19 @@ class ViewAdvertisements extends Component {
 
             this.state.advertisement.map( 
 
-                advertisement =>  
+                advertisements =>  
 
-                <tr key = {advertisement.aid}> 
+                <tr key = {advertisements.aid}> 
 
-                      <td> { advertisement.aid} </td>    
+                      <td> { advertisements.aid} </td>    
 
-                     <td> { advertisement.cropname} </td>    
+                     <td> { advertisements.cropname} </td>    
 
-                     <td>  { advertisement.quantity}</td> 
+                     <td>  { advertisements.quantity}</td> 
 
-                     <td> {advertisement.contact}</td>
-                     <td> {advertisement.name}</td>
-                     <td> {advertisement.unit}</td>
+                     <td> {advertisements.contact}</td>
+                     <td> {advertisements.name}</td>
+                     <td> {advertisements.unit}</td>
                    
                       
                 </tr> 
@@ -84,13 +104,16 @@ class ViewAdvertisements extends Component {
 
 
 
-</div> 
+</div> </div>
 
-                {/* <button className="btn btn-danger" onClick={this.goBack.bind(this)} style={{marginLeft: "10px"}}>Back</button>  */}
+<button className="btn btn-danger" onClick={this.goBack.bind(this)} style={{marginLeft: "10px"}}>Back</button> 
                 </div> 
-
+         </div>
+        
+         </div>       
+                
     );
   }
 }
 
-export default ViewAdvertisements;
+export default ViewAdvertisements

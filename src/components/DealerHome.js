@@ -38,6 +38,11 @@ class DealerHome extends Component {
               <p>
                 <Link to={`/dealers/${this.state.dealerEmail}`}><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)', padding: "10px 84px 10px 84px", color: "white", fontSize: "20px", fontFamily: "Copperplate" }}>View Dealers</Button></Link>
               </p>
+              <p>
+                <Link to={`/advertisement/${this.state.dealerEmail}`}><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)', padding: "10px 84px 10px 84px", color: "white", fontSize: "20px", fontFamily: "Copperplate" }}>Post Advertisement</Button></Link>
+              </p>
+              
+              
               {/* <p>
                 <Link to={`/farmerComplain/${this.state.farmerEmail}`}><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #fc5c7d, #6a82fb)', padding: "10px 80px 10px 80px", color: "white", fontSize: "20px", fontFamily: "Forte" }}>View Complaints</Button></Link>
               </p>
@@ -57,7 +62,7 @@ class DealerHome extends Component {
                 {/* <Card.Text>can view and delete complaints,</Card.Text>
                 <Card.Text>can view all the Advertisements,</Card.Text> */}
                
-                 {/* <Card.Text><Link to="/"><Button variant="danger" style={{ padding: "10px 30px" }}>Logout</Button></Link></Card.Text>  */}
+                 <Card.Text><Link to="/"><Button variant="danger" style={{ padding: "10px 30px" }}>Logout</Button></Link></Card.Text> 
                 <br />
               </Card>
 

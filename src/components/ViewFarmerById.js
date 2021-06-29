@@ -1,7 +1,7 @@
 import React, { Component } from 'react' 
 
 import FarmerService from '../Services/FarmerService' 
-
+import img6 from '../images/fields.jpg'
  
 
 class ViewFarmerById extends Component { 
@@ -38,7 +38,7 @@ class ViewFarmerById extends Component {
 
     goBack(){ 
 
-        this.props.history.push('/farmers'); 
+        this.props.history.push('/updateFarmer'); 
 
     } 
 
@@ -46,7 +46,11 @@ class ViewFarmerById extends Component {
 
     render() { 
 
-        return (            
+        return (       
+            <div style={{
+                backgroundImage: `url(${img6})`,
+                backgroundSize: "contain"
+            }}>     
 
             <div className = "container"> 
                 <br></br> 
@@ -82,7 +86,7 @@ class ViewFarmerById extends Component {
                     </table> 
                 <button className="btn btn-danger" onClick={this.goBack.bind(this)} style={{marginLeft: "10px"}}>Back</button> 
                 </div> 
-
+                </div>
         ) 
 
     } 

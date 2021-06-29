@@ -5,6 +5,7 @@ import { Jumbotron, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faTrash } from "@fortawesome/free-solid-svg-icons";
 import Table from 'react-bootstrap/Table';
+import img2 from '../images/farm2.jpg';
 
 class ListFarmerComponent extends Component {
     constructor(props) {
@@ -20,7 +21,7 @@ class ListFarmerComponent extends Component {
             });
     } render() {
         return (
-            <div style={{ backgroundImage: 'linear-gradient(to right, black, lightgreen)', }}>
+            <div style={{ backgroundImage:  `url(${img2})`, backgroundSize : "cover"}}>
                 <div style={{
                     backgroundColor: 'rgba(15,15,15,0.4)', filter: 'blur(10)',
                     display: "flex",
@@ -28,7 +29,7 @@ class ListFarmerComponent extends Component {
                     padding: "40px 40px"
                 }}>
                     <Jumbotron style={{ width: 1000, marginTop: "60px", marginBottom: "60px", backgroundColor: 'rgba(15,15,15,0.4)', filter: 'blur(10)', color: 'white' }}>
-                        <h1 style={{ fontFamily: "Forte" }}>List of Farmer(s)</h1>
+                        <h1 style={{ fontFamily: "serif" }}>List of Farmer(s)</h1>
                         <br />
                         <Table striped bordered hover variant="dark">
                             <thead>
@@ -36,7 +37,7 @@ class ListFarmerComponent extends Component {
                                     <th>Id</th>
                                     <th>Name</th>
                                     <th>Email Id</th>
-                                    <th> Crop Name</th>
+                                  
                                     <th> ContactNo</th>
                                     <th> Location </th>
                                 </tr>
@@ -48,7 +49,7 @@ class ListFarmerComponent extends Component {
                                                 <td>{farmers.farmerId}</td>
                                                 <td>{farmers.farmerName}</td>
                                                 <td>{farmers.emailId}</td>
-                                                <td>{farmers.cropName}</td>
+                                               
                                                 <td>{farmers.contactNo}</td>
                                                 <td>{farmers.location}</td>
                                             </tr>

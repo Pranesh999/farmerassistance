@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 
 import FarmerService from '../Services/FarmerService'; 
 
- 
+import img6 from '../images/fields.jpg'
+import { Form, InputGroup, Button } from 'react-bootstrap';
+import './app1.css';
 
 class RegisterFarmer extends Component { 
 
@@ -99,7 +101,7 @@ class RegisterFarmer extends Component {
 
                 
 
-                this.props.history.push('/farmers'); 
+                this.props.history.push('/updateFarmer'); 
 
             }); 
 
@@ -109,7 +111,7 @@ class RegisterFarmer extends Component {
 
                 
 
-                this.props.history.push('/farmers'); 
+                this.props.history.push('/updateFarmer'); 
 
             }); 
 
@@ -169,7 +171,7 @@ class RegisterFarmer extends Component {
 
     cancel(){ 
 
-        this.props.history.push('/farmers'); 
+        this.props.history.push('/updateFarmer'); 
 
     } 
 
@@ -194,14 +196,18 @@ class RegisterFarmer extends Component {
          
 
         return ( 
-
+            
+            <div style={{
+                backgroundImage: `url(${img6})`,
+                backgroundSize: "contain"
+            }}>
             <div> 
 
                 <br></br> 
 
-                   <div className = "container"> 
+                   <div className = "containername" > 
 
-                        <div className = "row"> 
+                        <div className = "rowe"> 
 
                             <div className = "card col-md-6 offset-md-3 offset-md-3"> 
 
@@ -213,11 +219,11 @@ class RegisterFarmer extends Component {
 
                                 <div className = "card-body"> 
 
-                                    <form> 
+                                    <form className="formname"> 
 
                                         <div className = "form-group"> 
-
-                                            <label> Farmer Id: </label> 
+                                       
+                                            <label> <h4>Farmer ID: </h4></label> 
 
                                             <input placeholder="Farmer Id" name="id" className="form-control"  
 
@@ -227,7 +233,7 @@ class RegisterFarmer extends Component {
 
                                         <div className = "form-group"> 
 
-                                            <label> Farmer Name: </label> 
+                                            <label><h4> Farmer Name:</h4> </label> 
 
                                             <input placeholder="farmerName" name="name" className="form-control"  
 
@@ -239,7 +245,7 @@ class RegisterFarmer extends Component {
 
                                         <div className = "form-group"> 
 
-                                            <label> Email Id: </label> 
+                                            <label><h4> Email Id:</h4> </label> 
 
                                             <input placeholder="Email Address" name="emailId" className="form-control"  
 
@@ -248,7 +254,7 @@ class RegisterFarmer extends Component {
                                         </div> 
                                         <div className = "form-group"> 
 
-                                        <label> Password: </label> 
+                                        <label> <h4>Password: </h4></label> 
 
                                         <input placeholder="password" name="password" className="form-control"  
 
@@ -258,17 +264,17 @@ class RegisterFarmer extends Component {
  
                                          <div className = "form-group"> 
 
-                                        <label> location: </label> 
+                                        <label> <h4>location: </h4> </label> 
 
-                                         <input placeholder="location" name="location" className="form-control"  
+                                         <input placeholder="location"  name="location" className="form-control"  
 
-                                         value={this.state.location} onChange={this.changeLocationHandler}/> 
+                                         value={this.state.location} onChange={this.changeLocationHandler}  /> 
 
                                           </div> 
 
                                           <div className = "form-group"> 
 
-                                        <label> Contact: </label> 
+                                        <label> <h4> Contact: </h4></label> 
 
                                         <input placeholder="contact" name="cotact" className="form-control"  
 
@@ -293,7 +299,7 @@ class RegisterFarmer extends Component {
                    </div> 
 
             </div> 
-
+</div>
         ) 
 
     } 

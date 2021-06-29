@@ -9,10 +9,10 @@ import img5 from '../images/farmlogin.jpg';
 import { Jumbotron } from 'react-bootstrap';
 
 const passwordRegex = RegExp(
-  // /^(?=.\\d)(?=.[!@#$%^&])(?=.[a-z])(?=.*[A-Z]).{8,}$/
+  /^(?=.\\d)(?=.[!@#$%^&])(?=.[a-z])(?=.*[A-Z]).{8,}$/
 );
 const emailRegex = RegExp(
-  // /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
+  /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
 );
 
 const formValid = ({ formErrors, ...rest }) => {
@@ -96,11 +96,11 @@ class FarmerLogin extends Component {
 
         this.setState({ loggedIn: true });
         console.log("success")
-        alert("Login Successful")
-        this.props.history.push("/farmer-home")
+      
+        this.props.history.push(`/farmer-home/${this.state.emailId}`)
       }, error => {
         toast.error("Invalid Email or Password")
-        alert("Invalid Details");
+      
       })
     }
   }
@@ -126,13 +126,13 @@ class FarmerLogin extends Component {
     let formErrors = { ...this.state.formErrors };
 
     switch (name) {
-      case "farmerEmail":
+      case "emailId":
         formErrors.emailId = emailRegex.test(value)
           //value.length < 5 ? "please enter a valid email" : "")
           ? ""
           : "invalid email";
         break;
-      case "farmerPassword":
+      case "password":
         formErrors.password = passwordRegex.test(value)
           ? ""
           : "Enter valid password";
@@ -169,7 +169,7 @@ class FarmerLogin extends Component {
                 paddingTop: "30px"
             }}>
           <Jumbotron style={{ width: 600, height: 500, textAlign: "center", backgroundColor: 'rgba(15,15,15,0.4)', filter: 'blur(10)', color: 'white' }}>
-            <h1 style={{ fontFamily: "Forte" }}>  <FontAwesomeIcon icon={faUsers} /> Farmer Login</h1>
+            <h1 style={{ fontFamily: "Apple Chancery" }}>  <FontAwesomeIcon icon={faUsers} /> Farmer Login</h1>
             <br />
 
             <Form

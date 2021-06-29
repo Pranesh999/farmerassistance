@@ -44,7 +44,7 @@ class ComplaintForm extends Component {
 componentDidMount()
   {
       let farmer= {};
-    DealerService.getAllDealers()
+    DealerService. getDealers()
     .then(response => {
       this.setState({dealers:response.data})
     });

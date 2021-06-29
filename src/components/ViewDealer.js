@@ -1,5 +1,12 @@
 import React, {Component} from 'react';
 import DealerService from '../Services/DealerService';
+import { Link } from "react-router-dom";
+import { Jumbotron, Button } from 'react-bootstrap';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faTrash } from "@fortawesome/free-solid-svg-icons";
+import Table from 'react-bootstrap/Table';
+
+
 
 class ViewDealer extends Component {
     constructor(props) {
@@ -40,15 +47,26 @@ class ViewDealer extends Component {
     }
     render() {
         return (
-            <div>
+            <div style={{ backgroundImage: 'linear-gradient(to right, black, lightgreen)', }}>
+            <div style={{
+                backgroundColor: 'rgba(15,15,15,0.4)', filter: 'blur(10)',
+                display: "flex",
+                justifyContent: "center",
+                padding: "40px 40px"
+            }}>
+            {/* <div>
                 <h2 className="text-center"> Dealers List </h2>
                 {/* <button className="btn btn-primary" onClick={this.addDealer}>Register Dealer</button> */}
-                <div className ="row">
+                {/* <div className ="row">
                     
                 </div>
                 <br></br>
                 <div className ="row">
-                    <table className="table table-striped table-bordered">
+                    <table className="table table-striped table-bordered"> */}
+                    <Jumbotron style={{ width: 1500, marginTop: "60px", marginBottom: "60px", backgroundColor: 'rgba(15,15,15,0.4)', filter: 'blur(10)', color: 'white' }}>
+                        <h1 style={{ fontFamily: "Forte" }}>List of Dealer(s)</h1>
+                        <br />
+                        <Table striped bordered hover variant="dark">
                         {/* <thread> */}
                             <tr>
                                 <th> Dealer Id</th>
@@ -80,8 +98,20 @@ class ViewDealer extends Component {
                                 )
                             }
                         </tbody>
-                    </table>
-                </div>
+                        </Table>
+                        <br />
+
+                   
+               
+                <Link to="/dealer-home">
+                            <Button variant="info"
+                                type="back" id="btnback"
+                                style={{ paddingLeft: "26px", paddingRight: "26px" }}>
+                                <FontAwesomeIcon icon={faArrowLeft} />  Back</Button>
+                        </Link>
+                        </Jumbotron>
+           
+            </div>
             </div>
         )
     }

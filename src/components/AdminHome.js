@@ -41,13 +41,16 @@ class AdminHome extends Component {
                         <Col style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'white' }}>
 
                             <p>
-                                <Link to="/viewComplaint"><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)', padding: "10px 76px 10px 76px", color: "white", fontSize: "20px", fontFamily: "Apple Chancery" }}>View Complaints</Button></Link>
+                                <Link to="/viewComplaint"><Button variant="bg-transparent" style={{ background: 'linear-gradient(to left, #ff99cc 0%, #00ffcc 100%)', padding: "10px 76px 10px 76px", color: "white", fontSize: "20px", fontFamily: "Apple Chancery" }}>View Complaints</Button></Link>
                             </p>
                             <p>
                                 <Link to="/viewFarmer"><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #fc5c7d, #6a82fb)', padding: "10px 93px 10px 93px", color: "white", fontSize: "20px", fontFamily: "Apple Chancery" }}>View Farmers</Button></Link>
                             </p>
                             <p>
-                                <Link to="/viewDealer"><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)', padding: "10px 93px 10px 93px", color: "white", fontSize: "20px", fontFamily: "Apple Chancery" }}>View Dealers</Button></Link>
+                                <Link to="/viewDealer"><Button variant="bg-transparent" style={{ background: 'linear-gradient(to left, #3333cc 0%, #ff66cc 100%)', padding: "10px 93px 10px 93px", color: "white", fontSize: "20px", fontFamily: "Apple Chancery" }}>View Dealers</Button></Link>
+                            </p>
+                            <p>
+                                <Link to="/updateFarmer"><Button variant="bg-transparent" style={{ background: 'linear-gradient(to left, #33ccff 0%, #00cc00 100%)', padding: "10px 80px 10px 80px", color: "white", fontSize: "20px", fontFamily: "Apple Chancery" }}>Update & Delete Farmer</Button></Link>
                             </p>
 
                         </Col>

@@ -32,10 +32,14 @@ import RegisterDealer from './components/RegisterDealer';
 import UpdateDealerComponent from './components/UpdateDealerComponent';
 import ViewDealer from './components/ViewDealer';
 import ViewDealerById from './components/ViewDealerById';
-
+import PostAdvertise from './components/PostAdvertise'
+import AddAdvertise from './components/AddAdvertise'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import ListAdvertise from './components/ListAdvertise';
+import FarmerList from './components/FarmerList'
+import Footer from './components/footer';
+import DealerRegister from './components/DealerRegister';
 toast.configure()
 function App() {
   return (
@@ -45,7 +49,7 @@ function App() {
       <Navbar bg="dark" variant="dark" expand="lg" style={{ height: 70 }}>
         <Navbar.Brand href="/" style={{ fontFamily: "Forte" }}>
           {' '}
-        Farmer Assistance System
+       
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -78,6 +82,7 @@ function App() {
         <Route path='/viewComplaint' component={ListComplaint} exact />
         <Route path='/viewFarmer' component={ListFarmerComponent} exact />
         <Route path='/viewDealer' component={ListDealerComponent} exact />
+        <Route path='/updateFarmer' component={ViewFarmer} exact />
 
 
 
@@ -88,9 +93,8 @@ function App() {
             <Route path = "/farmer-home" component = {FarmerHome}></Route> 
 
             <Route path={'/farmer-home/:email'} render={(props)=>
-        <FarmerHome {...props} key={props.match.params.email}/> }/> 
-           
-            <Route path = "/farmers" component = {ViewFarmer}></Route>
+          <FarmerHome {...props} key={props.match.params.email}/> }/>   
+            <Route path = "/farmers" component = {FarmerList}></Route>
             <Route path = "/view-farmer/:id" component = {ViewFarmerById}></Route>
                
             <Route path = "/add-farmer/:id" component = {RegisterFarmer}></Route>
@@ -116,7 +120,7 @@ function App() {
 
         <Route path="/dealer-home" exact component ={DealerHome}></Route>  
           <Route path="/DealerLogin" exact component ={DealerLogin}></Route>
-          <Route path="/dealersignup" exact component ={RegisterDealer}></Route> 
+          <Route path="/dealersignup" exact component ={DealerRegister}></Route> 
           <Route path="/logout" exact component ={DealerLogout}></Route>
 
             {/* <Route path="/" exact component ={ListDealerComponent}></Route>
@@ -125,12 +129,12 @@ function App() {
              <Route path="/dealers" component = {ViewDealer}></Route> 
              <Route path = "/view-dealer/:id" component = {ViewDealerById}></Route>
 
-
-
-
+            <Route path = "/" exact component = {ListAdvertise}></Route>
+                          <Route path = "/advertisement" component = {ListAdvertise}></Route>
+                          <Route path = "/add-advertise/:id" component = {PostAdvertise}></Route>
         
       </Switch>
-
+      <Footer></Footer>
       <div class="d-flex flex-column">
         <footer class="footer">
           <div style={{ backgroundColor: '#343A40' }}>

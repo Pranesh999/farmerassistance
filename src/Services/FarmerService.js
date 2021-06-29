@@ -57,7 +57,7 @@ class FarmerService {
 
     viewAdvertisements(){ 
 
-        return axios.get(FARMER_API_BASE_URL + '/viewAdvertisements'); 
+        return axios.get(FARMER_API_BASE_URL + '/viewAdvertisement'); 
 
     } 
 

@@ -1,37 +1,25 @@
 import React, { Component } from 'react'
-
-import Dealerservice from '../Services/DealerService';
+import FarmerService from '../Services/FarmerService';
 import { Link } from "react-router-dom";
 import { Jumbotron, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faTrash } from "@fortawesome/free-solid-svg-icons";
 import Table from 'react-bootstrap/Table';
 
-
-
-class ListDealerComponent extends Component {
+class ListFarmerComponent extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            dealer: []
+            farmers: []
         }
     }
     componentDidMount() {
-
-        Dealerservice.getDealers()
-
+        FarmerService.viewFarmer()
             .then((res) => {
-
-                this.setState({ dealer: res.data });
-
+                this.setState({ farmers: res.data });
             });
-
-    }
-    render() {
-
+    } render() {
         return (
-
-
             <div style={{ backgroundImage: 'linear-gradient(to right, black, lightgreen)', }}>
                 <div style={{
                     backgroundColor: 'rgba(15,15,15,0.4)', filter: 'blur(10)',
@@ -40,33 +28,36 @@ class ListDealerComponent extends Component {
                     padding: "40px 40px"
                 }}>
                     <Jumbotron style={{ width: 1000, marginTop: "60px", marginBottom: "60px", backgroundColor: 'rgba(15,15,15,0.4)', filter: 'blur(10)', color: 'white' }}>
-                        <h1 style={{ fontFamily: "Forte" }}>List of Dealer(s)</h1>
+                        <h1 style={{ fontFamily: "Forte" }}>List of Farmer(s)</h1>
                         <br />
                         <Table striped bordered hover variant="dark">
                             <thead>
                                 <tr>
                                     <th>Id</th>
                                     <th>Name</th>
-                                    <th>EmailId</th>
-                                    <th>ContactNo</th>
+                                    <th>Email Id</th>
+                                   
+                                    <th> ContactNo</th>
+                                    <th> Location </th>
                                 </tr>
-                            </thead>
-                            <tbody>
+                            </thead> <tbody>
                                 {
-                                    this.state.dealer.map(
-                                        dealer =>
-                                            <tr key={dealer.dealerId}>
-                                                <td>{dealer.dealerId}</td>
-                                                <td>{dealer.dealerName}</td>
-                                                <td>{dealer.dealerEmailId}</td>
-                                                <td>{dealer.dealerContactNumber}</td>
+                                    this.state.farmers.map(
+                                        farmers =>
+                                            <tr key={farmers.farmerId} >
+                                                <td>{farmers.farmerId}</td>
+                                                <td>{farmers.farmerName}</td>
+                                                <td>{farmers.emailId}</td>
+                                                
+                                                <td>{farmers.contactNo}</td>
+                                                <td>{farmers.location}</td>
                                             </tr>
                                     )
                                 }
                             </tbody>
                         </Table>
                         <br />
-                        <Link to="/admin-home">
+                        <Link to="/farmer-home">
                             <Button variant="info"
                                 type="back" id="btnback"
                                 style={{ paddingLeft: "26px", paddingRight: "26px" }}>
@@ -78,5 +69,4 @@ class ListDealerComponent extends Component {
         )
     }
 }
-
-export default ListDealerComponent;
+export default ListFarmerComponent

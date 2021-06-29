@@ -96,13 +96,13 @@ class SellCropComponent extends Component {
 
   render() {
     return (
-      <div>
+      <div className="update">
         <div className="container">
           <div className="row">
             <div className="card col-md-6 offset-md-3 offset-md-3">
               {this.getTitle()}
-              <div className="card-body">
-                <form>
+              <div className="card-b">
+                <form class>
                   <div className="form-group">
                     <label> Crop Id: </label>
                     <input

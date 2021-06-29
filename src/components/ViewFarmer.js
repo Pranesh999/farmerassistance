@@ -1,7 +1,7 @@
 import React, { Component } from 'react' 
 
 import FarmerService from '../Services/FarmerService' 
-
+import img6 from '../images/fields.jpg'
  
 
 class ViewFarmer extends Component { 
@@ -64,7 +64,7 @@ class ViewFarmer extends Component {
 
     goBack(){ 
 
-        this.props.history.push('/farmer-home'); 
+        this.props.history.push('/admin-home'); 
 
     } 
 
@@ -80,8 +80,20 @@ class ViewFarmer extends Component {
 
         return ( 
 
-            <div> 
+            <div>
+         {  /* <div style={{
+        backgroundImage: 'linear-gradient(to right, black, lightgreen)',
+        display: "flex",
+        justifyContent: "center",
+        paddingTop: "30px"
+    }}>*/}
 
+            <div> 
+            <div style={{
+                backgroundImage: `url(${img6})`,
+                backgroundSize: "contain"
+            }}>
+                
                  <h2 className="text-center">Farmers List</h2> 
 
                  {/* <div className = "row"> 
@@ -157,12 +169,16 @@ class ViewFarmer extends Component {
                         </table> 
 
  
+</div>
 
+
+<button className="btn btn-danger" onClick={this.goBack.bind(this)} style={{marginLeft: "10px"}}>Back</button> 
                  </div> 
-                 <button className="btn btn-danger" onClick={this.goBack.bind(this)} style={{marginLeft: "10px"}}>Back</button> 
- 
+             
 
-            </div> 
+                 </div>      </div> 
+                
+ 
 
         ) 
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from "react-router-dom";
 import { Jumbotron, Button, Card, Row, Col, CardImg } from 'react-bootstrap';
-import img3 from '../images/farmer.jpg';
+import img6 from '../images/fields.jpg';
 import { Link } from "react-router-dom";
 
 class FarmerHome extends Component {
@@ -31,26 +31,26 @@ class FarmerHome extends Component {
         }}>
 
 
-
+       <div style={{backgroundImage: `url(${img6})`,backgroundSize: "contain"}}>
           <Row>
             <Col style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'white' }}>
 
               <p>
-                <Link to={`/farmers/${this.state.emailId}`}><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)', padding: "10px 84px 10px 84px", color: "white", fontSize: "20px", fontFamily: "Forte" }}>View Farmers</Button></Link>
+                <Link to={`/farmers/${this.state.emailId}`}><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)', padding: "10px 84px 10px 84px", color: "white", fontSize: "20px", fontFamily: "Apple Chancery" }}>View Farmers</Button></Link>
               </p>
               <p>
-                <Link to={`/addComplaint/${this.state.emailId}`}><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #fc5c7d, #6a82fb)', padding: "10px 80px 10px 80px", color: "white", fontSize: "20px", fontFamily: "Forte" }}>Post Complaints</Button></Link>
+                <Link to={`/addComplaint/${this.state.emailId}`}><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #fc5c7d, #6a82fb)', padding: "10px 80px 10px 80px", color: "white", fontSize: "20px", fontFamily: "Apple Chancery" }}>Post Complaints</Button></Link>
               </p>
               <p>
-                <Link to={`/viewAdvertisements/${this.state.emailId}`}><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)', padding: "10px 55px 10px 55px", color: "white", fontSize: "20px", fontFamily: "Forte" }}>View All Advertisement</Button></Link>
+                <Link to={`/viewAdvertisements/${this.state.emailId}`}><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #00b09b, #96c93d)', padding: "10px 55px 10px 55px", color: "white", fontSize: "20px", fontFamily: "Apple Chancery" }}>View All Advertisement</Button></Link>
               </p>
               <p>
-                <Link to={`/add-crop`}><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #fc5c7d, #6a82fb)', padding: "10px 80px 10px 80px", color: "white", fontSize: "20px", fontFamily: "Forte" }}>Sell Crop</Button></Link>
+                <Link to={`/add-crop`}><Button variant="bg-transparent" style={{ background: 'linear-gradient(to right, #fc5c7d, #6a82fb)', padding: "10px 80px 10px 80px", color: "white", fontSize: "20px", fontFamily: "Apple Chancery" }}>Sell Crop</Button></Link>
               </p>
             </Col>
             <Col style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'white' }}>
 
-              <Card style={{ backgroundColor: 'rgba(15,15,15,0.2)', color: "white", fontSize: "25px", fontFamily: "Forte" }}>
+              <Card style={{ backgroundColor: 'rgba(15,15,15,0.2)', color: "white", fontSize: "25px", fontFamily: "Apple Chancery" }}>
 
                 {/* <CardImg src={img3} ></CardImg> */}
                 <br />
@@ -68,6 +68,7 @@ class FarmerHome extends Component {
           </Row>
           {/* </Jumbotron> */}
         </div>
+      </div>
       </div>
     );
 

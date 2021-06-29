@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
-import FarmerService from '../Services/FarmerService';
+import DealerService from '../Services/DealerService';
 import { Form, InputGroup, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faLock, faUserPlus, faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
-import img6 from '../images/fields.jpg';
+import img5 from '../images/image33.jpg';
 import { Jumbotron } from 'react-bootstrap';
 
 const numberRegex = RegExp(
@@ -39,45 +39,45 @@ const formValid = ({ formErrors, ...rest }) => {
   return valid;
 };
 
-class FarmerRegistration extends Component {
+class DealerRegister extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      farmerName: '',
-      emailId: '',
-      contactNo: '',
-      password: '',
-      location:'',
+      dealerName: '',
+      dealerEmailId: '',
+      dealerContactNumber: '',
+      dealerPassword: '',
+     
 
       formErrors: {
-        farmerName: "",
-        emailId: "",
-        contactNo: "",
-        password: "",
-        location:""
+        dealerName: "",
+        dealerEmailId: "",
+        dealerContactNumber: "",
+        dealerPassword: "",
+       
       }
     };
-    this.addFarmer = this.addFarmer.bind(this);
+    this.addDealer = this.addDealer.bind(this);
   }
 
   componentDidMount() {
 
     // step 4
-    if (this.state.emailId === '_add') {
+    if (this.state.dealerEmailId === '_add') {
       return
 
     }
   }
 
 
-  addFarmer = (e) => {
+  addDealer = (e) => {
     e.preventDefault();
-    let farmer = { farmerName: this.state.farmerName, emailId: this.state.emailId, contactNo: this.state.contactNo, password: this.state.password, location: this.state.location };
-    console.log('farmer => ' + JSON.stringify(farmer));
+    let dealer = { dealerName: this.state.dealerName, dealerEmailId: this.state.dealerEmailId, dealerContactNumber: this.state.dealerContactNumber, dealerPassword: this.state.dealerPassword};
+    console.log('dealer => ' + JSON.stringify(dealer));
 
-    FarmerService.registerFarmer(farmer).then(res => {
-      this.props.history.push('/home');
+    DealerService.addDealer(dealer).then(res => {
+      this.props.history.push('/DealerLogin');
     }, error => {
       alert("Invalid Name, EmailId, ContactNo or Password");
     });
@@ -89,11 +89,11 @@ class FarmerRegistration extends Component {
     if (formValid(this.state)) {
       console.log(`
             --SUBMITTING--
-            farmer Name: ${this.state.farmerName}
-            farmer Email:${this.statr.emailId}
-            farmer Contact Number: ${this.state.contactNo}
-            farmer password:${this.state.password}
-            farmer palocation:${this.state.location}
+                ]            dealer Name: ${this.state.dealerName}
+            dealer Email:${this.statr.dealerEmailId}
+            dealer Contact Number: ${this.state.dealerContactNumber}
+            dealer password:${this.state.dealerPassword}
+           
              
           `);
     } else {
@@ -108,32 +108,27 @@ class FarmerRegistration extends Component {
     let formErrors = { ...this.state.formErrors };
 
     switch (name) {
-      case "farmerName":
-        formErrors.farmerName = nameRegex.test(value)
+      case "dealerName":
+        formErrors.dealerName = nameRegex.test(value)
           ? "" : "Invalid Name";
         break;
-      case "emailId":
-        formErrors.emailId = emailRegex.test(value)
+      case "dealerEmailId":
+        formErrors.dealerEmailId = emailRegex.test(value)
           //value.length < 5 ? "please enter a valid email" : "")
           ? ""
           : "invalid email";
         break;
-      case "contactNo":
-        formErrors.contactNo = numberRegex.test(value)
+      case "dealerContactNumber":
+        formErrors.dealerContactNumber = numberRegex.test(value)
           ? ""
           : "invalid Contact Number";
         break;
-      case "password":
-        formErrors.password = passwordRegex.test(value)
+      case "dealerPassword":
+        formErrors.dealerPassword = passwordRegex.test(value)
           ? ""
           : "validate password";
         break;
-        case "location":
-          formErrors.location = passwordRegex.test(value)
-            ? ""
-            : "validate location";
-          break;
-
+        
       default:
         break;
     }
@@ -146,7 +141,7 @@ class FarmerRegistration extends Component {
     const { formErrors } = this.state;
     return (
       <div style={{
-        backgroundImage: `url(${img6})`,
+        backgroundImage: `url(${img5})`,
         backgroundSize: "cover"
       }}>
         <div style={{
@@ -166,10 +161,10 @@ class FarmerRegistration extends Component {
                   <InputGroup.Prepend>
                     <InputGroup.Text><FontAwesomeIcon icon={faUser} /></InputGroup.Text>
                   </InputGroup.Prepend>
-                  <Form.Control className={formErrors.farmerName.length > 0 ? "error" : null} autoComplete="off" type="text" name="farmerName" placeholder="Enter Name" value={this.state.farmerName} onChange={this.handleChange} />
+                  <Form.Control className={formErrors.dealerName.length > 0 ? "error" : null} autoComplete="off" type="text" name="dealerName" placeholder="Enter Name" value={this.state.dealerName} onChange={this.handleChange} />
                 </InputGroup>
-                {formErrors.farmerName.length > 0 && (
-                  <span className="errorMessage">{formErrors.farmerName}</span>
+                {formErrors.dealerName.length > 0 && (
+                  <span className="errorMessage">{formErrors.dealerName}</span>
                 )}
               </Form.Group>
 
@@ -179,10 +174,10 @@ class FarmerRegistration extends Component {
                   <InputGroup.Prepend>
                     <InputGroup.Text><FontAwesomeIcon icon={faUser} /></InputGroup.Text>
                   </InputGroup.Prepend>
-                  <Form.Control className={formErrors.emailId.length > 0 ? "error" : null} required autoComplete="off" type="email" name="emailId" value={this.state.emailId} onChange={this.handleChange} id="Email" placeholder="Enter Email" />
+                  <Form.Control className={formErrors.dealerEmailId.length > 0 ? "error" : null} required autoComplete="off" type="email" name="dealerEmailId" value={this.state.dealerEmailId} onChange={this.handleChange} id="Email" placeholder="Enter Email" />
                 </InputGroup>
-                {formErrors.emailId.length > 0 && (
-                  <span className="errorMessage">{formErrors.emailId}</span>
+                {formErrors.dealerEmailId.length > 0 && (
+                  <span className="errorMessage">{formErrors.dealerEmailId}</span>
                 )}
               </Form.Group>
 
@@ -192,10 +187,10 @@ class FarmerRegistration extends Component {
                   <InputGroup.Prepend>
                     <InputGroup.Text><FontAwesomeIcon icon={faPhone} /></InputGroup.Text>
                   </InputGroup.Prepend>
-                  <Form.Control className={formErrors.contactNo.length > 0 ? "error" : null} autoComplete="off" type="contactNumber" name="contactNo" value={this.state.contactNo} onChange={this.handleChange} id="contact" placeholder="Enter Contact Number" />
+                  <Form.Control className={formErrors.dealerContactNumber.length > 0 ? "error" : null} autoComplete="off" type="contactNumber" name="dealerContactNumber" value={this.state.dealerContactNumber} onChange={this.handleChange} id="contact" placeholder="Enter Contact Number" />
                 </InputGroup>
-                {formErrors.contactNo.length > 0 && (
-                  <span className="errorMessage">{formErrors.contactNo}</span>
+                {formErrors.dealerContactNumber.length > 0 && (
+                  <span className="errorMessage">{formErrors.dealerContactNumber}</span>
                 )}
               </Form.Group>
 
@@ -205,15 +200,15 @@ class FarmerRegistration extends Component {
                   <InputGroup.Prepend>
                     <InputGroup.Text><FontAwesomeIcon icon={faLock} /></InputGroup.Text>
                   </InputGroup.Prepend>
-                  <Form.Control className={formErrors.password.length > 0 ? "error" : null} autoComplete="off" type="password"
-                    name="password" value={this.state.password} onChange={this.handleChange} id="Password" placeholder="Enter Password" />
+                  <Form.Control className={formErrors.dealerPassword.length > 0 ? "error" : null} autoComplete="off" type="password"
+                    name="dealerPassword" value={this.state.dealerPassword} onChange={this.handleChange} id="Password" placeholder="Enter Password" />
                 </InputGroup>
-                {formErrors.password.length > 0 && (
-                  <span className="errorMessage">{formErrors.password}</span>
+                {formErrors.dealerPassword.length > 0 && (
+                  <span className="errorMessage">{formErrors.dealerPassword}</span>
                 )}
               </Form.Group>
 
-              <Form.Group controlId="formBasicPassword">
+              {/* <Form.Group controlId="formBasicPassword">
                 <Form.Label>Enter Location</Form.Label>
                 <InputGroup>
                   <InputGroup.Prepend>
@@ -225,13 +220,13 @@ class FarmerRegistration extends Component {
                 {formErrors.location.length > 0 && (
                   <span className="errorMessage">{formErrors.location}</span>
                 )}
-              </Form.Group>
+              </Form.Group> */}
               <br />
               <Form.Group controlId="formBasicButton">
-                <Button variant="success" type="submit" onClick={this.addFarmer} disabled={this.state.password.length === 0 || this.state.farmerName.length === 0 || this.state.emailId.length === 0 || this.state.contactNo.length === 0} style={{ padding: "7px 80px", marginLeft: "140px" }}> <FontAwesomeIcon icon={faUserPlus} />   SIGN-UP </Button>
+                <Button variant="success" type="submit" onClick={this.addDealer} disabled={this.state.dealerPassword.length === 0 || this.state.dealerName.length === 0 || this.state.dealerEmailId.length === 0 || this.state.dealerContactNumber.length === 0} style={{ padding: "7px 80px", marginLeft: "140px" }}> <FontAwesomeIcon icon={faUserPlus} />   SIGN-UP </Button>
               </Form.Group>
               <Form.Group controlId="formBasicLink">
-                <small><Link to="/home" style={{ textDecoration: "none" }}><h5 style={{ fontFamily: "Calibri", paddingLeft: "125px" }}>Already Have an Account? - Log-in</h5></Link></small>
+                <small><Link to="/DealerLogin" style={{ textDecoration: "none" }}><h5 style={{ fontFamily: "Calibri", paddingLeft: "125px" }}>Already Have an Account? - Log-in</h5></Link></small>
               </Form.Group>
             </Form>
           </Jumbotron>
@@ -240,4 +235,4 @@ class FarmerRegistration extends Component {
     );
   }
 }
-export default FarmerRegistration;
+export default DealerRegister;

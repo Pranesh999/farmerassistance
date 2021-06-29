@@ -1,10 +1,12 @@
 import { Button, Card, Row, CardColumns } from 'react-bootstrap';
 import img5 from '../images/new.jpg';
+import img1 from '../images/green.jpg'
+import img2 from '../images/yellow.jpg'
 
 const HomeComponent = () => {
   return (
     <div style={{
-      backgroundImage: `url(${img5})`, backgroundSize: "cover"
+      backgroundImage: `url(${img2})`, backgroundSize: "cover"
     }}>
       <div style={{ backgroundColor: 'rgba(15,15,15,0.5)', filter: 'blur(10)', padding: "40px 40px" }}>
 
@@ -29,7 +31,7 @@ const HomeComponent = () => {
               bg="transparent" text="light" className="mb-3" style={{ width: "20rem" }}>
               <a href="/adminLogin">
                 <Card.Body style={{ backgroundImage: 'linear-gradient(to top, #ccccff 0%, #66ccff 100%)' }}>
-                  <Button variant="link" style={{ padding: "50px 80px", textDecoration: "none", fontFamily: "Forte", fontSize: "20px", color: "black" }} >Admin Login</Button>
+                  <Button variant="link" style={{ padding: "50px 80px", textDecoration: "none", fontFamily: "Apple Chancery", fontSize: "20px", color: "black" }} >Admin Login</Button>
                 </Card.Body>
               </a>
               <Card.Body style={{ paddingBottom: "45px" }}>
@@ -42,7 +44,7 @@ const HomeComponent = () => {
               bg="transparent" text="light" className="mb-3" style={{ width: "20rem" }}>
               <a href="/home">
                 <Card.Body style={{ backgroundImage: 'linear-gradient(to bottom left, #33cc33 0%, #0099cc 100%)' }}>
-                  <Button variant="link" style={{ padding: "50px 80px", textDecoration: "none", fontFamily: "Forte", fontSize: "20px", color: "black" }} >Farmer Login</Button>
+                  <Button variant="link" style={{ padding: "50px 80px", textDecoration: "none", fontFamily: "Apple Chancery", fontSize: "20px", color: "black" }} >Farmer Login</Button>
                 </Card.Body>
               </a>
               <Card.Body>
@@ -55,7 +57,7 @@ const HomeComponent = () => {
               bg="transparent" text="light" className="mb-3" style={{ width: "20rem" }}>
               <a href="/DealerLogin">
                 <Card.Body style={{ backgroundImage: 'linear-gradient(to bottom left, #ff3399 0%, #0099cc 100%)' }}>
-                  <Button variant="link" style={{ padding: "50px 80px", textDecoration: "none", fontFamily: "Forte", fontSize: "20px", color: "black" }} >Dealer Login</Button>
+                  <Button variant="link" style={{ padding: "50px 80px", textDecoration: "none", fontFamily: "Apple Chancery", fontSize: "20px", color: "black" }} >Dealer Login</Button>
                 </Card.Body>
               </a>
               <Card.Body>
