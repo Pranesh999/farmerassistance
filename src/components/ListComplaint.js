@@ -5,6 +5,7 @@ import ComplaintService from '../Services/ComplaintService'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faArrowLeft, faTrash} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import img6 from '../images/flower.jpg';
 
 class ListComplaint extends Component {
     constructor(props) {
@@ -26,12 +27,12 @@ class ListComplaint extends Component {
         return (
             <div>
                 <div style={{
-            backgroundImage: 'linear-gradient(to right, black, lightgreen)',
-            display: "flex",
+            backgroundImage: `url(${img6})`,
+            backgroundSize: "flex",
             justifyContent: "center",
             paddingTop: "30px"
         }}>
-            <Jumbotron style={{width: 1000, marginTop:"73px", marginBottom:"73px", backgroundColor:'rgba(15,15,15,0.4)', filter: 'blur(10)', color: 'white'}}>
+            <Jumbotron style={{width: 1300,  backgroundColor:'rgba(15,15,15,0.4)', filter: 'blur(10)', color: 'white'}}>
                 <h1 style={{fontFamily:"Forte"}}>All Complaints</h1>
                 <Table striped hover variant="dark">
                     <thead>

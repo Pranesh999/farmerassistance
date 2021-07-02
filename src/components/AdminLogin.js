@@ -7,7 +7,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faUserPlus, faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { Form, Jumbotron, Button } from 'react-bootstrap';
 import { } from '../../src/index.css';
+
 import img5 from '../images/admin2.jpg';
+
 import img6 from '../images/adbg.jpg'
 import { toast, ToastContainer } from 'react-toastify';
 import Adminservice from '../Services/Adminservice';
