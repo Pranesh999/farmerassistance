@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const CANDIDATE_API_BASE_URL = "http://localhost:8080/admin/login";
+const CANDIDATE_API_BASE_URL = "http://localhost:8081/admin/login";
 
 class Adminservice {
 

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 //const FARMER_API_BASE_URL = "http://localhost:9093/farmer";
-const FARMER_API_BASE_URL = "http://localhost:8080/farmer";
+const FARMER_API_BASE_URL = "http://localhost:8081/farmer";
 
 
 

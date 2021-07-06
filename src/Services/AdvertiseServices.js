@@ -1,6 +1,6 @@
 import axios from 'axios'; 
 
-const ADVERTISE_API_BASE_URL = "http://localhost:8080/advertisement"; 
+const ADVERTISE_API_BASE_URL = "http://localhost:8081/advertisement"; 
 
 class AdvertiseServices { 
 

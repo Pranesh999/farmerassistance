@@ -1,5 +1,5 @@
 import axios from 'axios';
-const DEALER_API_BASE_URL ="http://localhost:8080/dealer";
+const DEALER_API_BASE_URL ="http://localhost:8081/dealer";
 
 class DealerService {
     getDealers() {
